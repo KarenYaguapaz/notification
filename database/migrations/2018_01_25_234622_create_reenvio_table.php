@@ -14,7 +14,10 @@ class CreateReenvioTable extends Migration
     public function up()
     {
         Schema::table('reenvio', function (Blueprint $table) {
-            //
+             $table->increments('id');//correo
+             $table->string('title',100);//mismo titulo
+             $table->text('description');//comentario de la notificacion
+             $table->date('date');//fecha
         });
     }
 
