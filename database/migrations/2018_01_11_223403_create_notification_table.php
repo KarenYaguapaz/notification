@@ -13,11 +13,12 @@ class CreateNotificationTable extends Migration
      */
     public function up()
     {
-        Schema::table('notifications', function (Blueprint $table) {
+        Schema::dropIfExists('notifications');
+        Schema::create('notifications', function (Blueprint $table) {
              $table->increments('id');
              $table->string('title', 100);
              $table->text('description');
-             $table->date('date');
+             $table->timestamps();
         });
     }
 

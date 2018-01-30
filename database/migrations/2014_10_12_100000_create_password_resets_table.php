@@ -13,10 +13,11 @@ class CreatePasswordResetsTable extends Migration
      */
     public function up()
     {
+          Schema::dropIfExists('password_resets');
         Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email.log')->index();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable(); //cuando se creo este registro
+            $table->string('email')->index();
+            $table->string('token')->index();
+            $table->timestamp('created_at');
         });
     }
 
