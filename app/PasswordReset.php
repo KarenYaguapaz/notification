@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class PasswordReset extends Model
 {
-    protected $table = 'PasswordReset';
-    protected $primaryKey= 'id';
-    protected $timestamps= false;
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'password_resets';
 }

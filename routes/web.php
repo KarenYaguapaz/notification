@@ -24,6 +24,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/')
+Route::get('users/{id}', 'UsersController@show');
 
-Route::view('users', 'Usuarios')
+Route::get('passwordresets/{id}', 'PasswordResetsController@show');
