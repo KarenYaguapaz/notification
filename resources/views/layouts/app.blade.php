@@ -8,9 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>CLADIAN DIGITAL CONSULTING</title>
 
-    <!-- Styles -->
+    <!-- Styles {{ config('app.name', 'Laravel') }}-->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
