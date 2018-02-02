@@ -21,9 +21,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
-
+ 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('users/{id}', 'UsersController@show');
+Route::get('/users', 'HomeController@user');
 
-Route::get('passwordresets/{id}', 'PasswordResetsController@show');
+Route::get('/notification', 'HomeController@notification');
