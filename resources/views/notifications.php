@@ -6,6 +6,7 @@
     <title>Notificaciones</title>
 </head>
 <body>
-    <h1>Notificaciones</h1>
+    <h1 style="text-align: center;">Notificaciones</h1>
+
 </body>
 </html>
