@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+/*namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -12,8 +12,8 @@ class UsersController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+   // public function index()
     {
-        return view('users', ['user' => User::findOrFail($id)]);
+     //   return view('users', ['user' => User::findOrFail($id)]);
     }
 }
