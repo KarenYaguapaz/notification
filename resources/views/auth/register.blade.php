@@ -39,6 +39,48 @@
                             </div>
                         </div>
 
+                            <div class="form-group{{ $errors->has('birth') ? ' has-error' : '' }}">
+                                <label for="birth" class="col-md-4 control-label">Birth</label>
+
+                                <div class="col-md-6">
+                                    <input id="birth" type="text" class="form-control" name="birth" value="{{ old('birth') }}" required>
+
+                                    @if ($errors->has('Birth'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('birth') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                                <label for="phone" class="col-md-4 control-label">Phone</label>
+
+                                <div class="col-md-6">
+                                    <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" required>
+
+                                    @if ($errors->has('Phone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('job title') ? ' has-error' : '' }}">
+                                <label for="job title" class="col-md-4 control-label">Job Title</label>
+
+                                <div class="col-md-6">
+                                    <input id="job title" type="text" class="form-control" name="job title" value="{{ old('job title') }}" required>
+
+                                    @if ($errors->has('Job Title'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('job title') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
