@@ -52,7 +52,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Perfil </a> </li>
+                                    <li><a href="{{ action('HomeController@user') }}">Perfil </a> </li>
+                                    <li><a href="{{ action('HomeController@index') }}">Notificaciones </a> </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
