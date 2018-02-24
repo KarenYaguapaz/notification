@@ -25,20 +25,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
                             <div class="form-group{{ $errors->has('birth') ? ' has-error' : '' }}">
                                 <label for="birth" class="col-md-4 control-label">Birth</label>
 
@@ -67,19 +53,33 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('job title') ? ' has-error' : '' }}">
-                                <label for="job title" class="col-md-4 control-label">Job Title</label>
+                            <div class="form-group{{ $errors->has('jobtitle') ? ' has-error' : '' }}">
+                                <label for="jobtitle" class="col-md-4 control-label">Job Title</label>
 
                                 <div class="col-md-6">
-                                    <input id="job title" type="text" class="form-control" name="job title" value="{{ old('job title') }}" required>
+                                    <input id="jobtitle" type="text" class="form-control" name="jobtitle" value="{{ old('jobtitle') }}" required>
 
-                                    @if ($errors->has('Job Title'))
+                                    @if ($errors->has('jobtitle'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('job title') }}</strong>
+                                        <strong>{{ $errors->first('jobtitle') }}</strong>
                                     </span>
-                                    @endif
+                                    @endif 
                                 </div>
                             </div>
+
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
