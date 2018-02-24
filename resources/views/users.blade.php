@@ -11,13 +11,13 @@
 				<div class="panel-body">
 					<div class="col-md-3">
 						<div class="container">
-
-<form enctype="multipart/form-data">
-<div class="form-group">
-<input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
-</div>
-</form>
-</div>
+							
+							<form enctype="multipart/form-data">
+								<div class="form-group">
+									<input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
+								</div>
+							</form>
+						</div>
 
 					</div>
 					<div class="col-md-9">                   
@@ -33,20 +33,6 @@
 									@if ($errors->has('name'))
 									<span class="help-block">
 										<strong>{{ $errors->first('name') }}</strong>
-									</span>
-									@endif
-								</div>
-							</div>
-
-							<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-								<label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-								<div class="col-md-6">
-									<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-									@if ($errors->has('email'))
-									<span class="help-block">
-										<strong>{{ $errors->first('email') }}</strong>
 									</span>
 									@endif
 								</div>
@@ -80,15 +66,29 @@
 								</div>
 							</div>
 
-							<div class="form-group{{ $errors->has('job title') ? ' has-error' : '' }}">
-								<label for="job title" class="col-md-4 control-label">Job Title</label>
+							<div class="form-group{{ $errors->has('jobtitle') ? ' has-error' : '' }}">
+								<label for="jobtitle" class="col-md-4 control-label">Job Title</label>
 
 								<div class="col-md-6">
-									<input id="job title" type="text" class="form-control" name="job title" value="{{ old('job title') }}" required>
+									<input id="jobtitle" type="text" class="form-control" name="jobtitle" value="{{ old('jobtitle') }}" required>
 
 									@if ($errors->has('Job Title'))
 									<span class="help-block">
-										<strong>{{ $errors->first('job title') }}</strong>
+										<strong>{{ $errors->first('jobtitle') }}</strong>
+									</span>
+									@endif
+								</div>
+							</div>
+
+							<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+								<label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+								<div class="col-md-6">
+									<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+									@if ($errors->has('email'))
+									<span class="help-block">
+										<strong>{{ $errors->first('email') }}</strong>
 									</span>
 									@endif
 								</div>
