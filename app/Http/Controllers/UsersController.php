@@ -1,19 +1,18 @@
 <?php
 
-/*namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
-    /**
-     * Show the profile for the given user.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-   // public function index()
+    public function __construct()
     {
-     //   return view('users', ['user' => User::findOrFail($id)]);
+        $this->middleware('auth');
     }
+
+    public function index(){
+        return view ('users');
+    }
+    
 }
