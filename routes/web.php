@@ -20,10 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
- 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user', 'UsersController@index');
 
-Route::get('/users', 'HomeController@user');
-
-Route::get('/notification', 'HomeController@notification');
+Route::get('/notification', 'NotificationsController@index');
