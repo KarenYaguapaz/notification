@@ -25,12 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function notification()
-    {
-      return view('notifications');
-    }
-    public function user()
-    {
-      return view('users');
-    }
 }
