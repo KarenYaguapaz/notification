@@ -11,7 +11,10 @@ class NotificationsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    /*public function index(){
         return view ('notifications');
+    }*/
+    public function index(){
+    	return view ('notification.index', ['notifications' => Notifications::get()]);
     }
 }
