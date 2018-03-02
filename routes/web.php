@@ -21,5 +21,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user', 'UsersController@index');
+Route::get('/user/index', ['as'=>'users.index','uses'=>'UsersController@index']);
 
 Route::get('/notification', 'NotificationsController@index');
+Route::get('/notification/index', ['as'=>'notifications.index','uses'=>'NotificationsController@index']);
