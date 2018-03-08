@@ -21,8 +21,8 @@ class UsersTableSeeder extends Seeder
        //for ($i=0; $i<10;$i++){
            DB::table('users')->insert([
            'name'=> $faker->name,
-           'birth'=> $faker->year,
-           'phone'=> $faker->name,
+           'birth'=> $faker->date('Y-m-d'),
+           'phone'=> $faker->biasedNumberBetween('0987654321','0987765543') ,
            'jobtitle'=> $faker->word,
            'email' => $faker->email,
            'password' => bcrypt('secret'),

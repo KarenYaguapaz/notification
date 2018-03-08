@@ -26,7 +26,14 @@
                     		<a href="{{ action('HomeController@index') }}" class="btn btn-primary">Ver Más</a>
                     	</div>
                     </div>
-                 
+                 <div class="col-md-12"> 
+                     
+                        {!!Form::open(['route' => 'notifications.store', 'method'=> 'POST', 'files'=>true])!!}                 
+                        {{Form::file('image')}}
+                        {{Form::submit('Click Me!')}}
+                        {!!Form::close()!!}
+                    
+                    </div> 
                 </div>
             </div>
         </div>
