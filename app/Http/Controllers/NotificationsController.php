@@ -11,10 +11,11 @@ class NotificationsController extends Controller
         $this->middleware('auth');
     }
 
-    /*public function index(){
-        return view ('notifications');
-    }*/
     public function index(){
-    	return view ('notification.index', ['notifications' => Notifications::get()]);
+        return view ('notifications');
+    }
+    public function store(Request $request){
+        notifications::create($request->all());
+        return view ('notifications');
     }
 }
