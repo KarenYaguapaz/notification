@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">User List</div>
+                    <div class="panel-heading">Page List</div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -28,9 +28,13 @@
                                     <td>{{$page->image}}</td>
                                     <td></td>
                                     <td><a href="{{route('page.show',['id'=>$page->id])}}">Show</a></td>
-
+                                    <td><a href="{{route('page.edit',['id'=>$page->id])}}">Edit</a></td>
+                                    <td>{!! Form::open(['method' => 'DELETE','route' => ['page.destroy', $page->id],'style'=>'display:inline']) !!}
+                                        {!! Form::submit('Delete', ['class' => 'btn btn-warning']) !!}
+                                        {!! Form::close() !!}</td>
                                 </tr>
                             @endforeach
+
                         </table>
 
 

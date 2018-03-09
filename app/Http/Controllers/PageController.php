@@ -17,7 +17,7 @@ class PageController extends Controller
     public function index()
     {
         //dd(Page::get());
-        return view('page.index',['pages'=>Page::get()]);
+        return view('page.index',['pages'=>Page::get()]);//recibir datos
     }
 
     /**
@@ -58,7 +58,7 @@ class PageController extends Controller
      */
     public function show($id)
     {   $page=Page::find($id);
-        dd(\Storage::url($page->image));
+        //dd(\Storage::url($page->image));
         $noticacion=Notification::first();
         $total=1000;
         return view('page.show',['page'=>$page,'total'=>$total,'noti'=>$noticacion]);
@@ -72,7 +72,9 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page = Page::find($id);
+        //dd($page);
+        return view('page.edit',['page'=>$page]);
     }
 
     /**
@@ -84,7 +86,17 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //dd($request);
+        $page = Page::find($id);
+        request()->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+        $input = $request->all();
+        $page->fill($input)->save();
+        //Page::find($id)->update($request->all());
+        return redirect()->route('page.index')
+            ->with('success','Article updated successfully');
     }
 
     /**
@@ -95,6 +107,9 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //dd($id);
+        Page::find($id)->delete();
+        return redirect()->route('page.index')
+            ->with('success','Article deleted successfully');
     }
 }
