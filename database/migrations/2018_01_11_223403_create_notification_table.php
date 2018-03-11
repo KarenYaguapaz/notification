@@ -18,7 +18,11 @@ class CreateNotificationTable extends Migration
              $table->increments('id');
              $table->string('title', 100);
              $table->text('description');
+
              $table->timestamps();
+        });
+        Schema::table('notification', function ($table){
+            $table->text('file');
         });
     }
 
