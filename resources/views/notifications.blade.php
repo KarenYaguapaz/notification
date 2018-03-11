@@ -28,7 +28,7 @@
                     </div>
                  <div class="col-md-12"> 
                      
-                        {!!Form::open(['route' => 'notifications.store', 'method'=> 'POST', 'files'=>true])!!}                 
+                        {!!Form::open(['route' => 'notifications.store', 'files'=>true])!!}                 
                         {{Form::file('image')}}
                         {{Form::submit('Click Me!')}}
                         {!!Form::close()!!}

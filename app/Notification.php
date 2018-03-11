@@ -8,7 +8,7 @@ use Carbon\Carbon;
 class Notification extends Model
 {
 	//A que tabla hace referencia este modelo
-    protected $table ='notification';
+    //protected $table ='notifications';
 
     //Los campos que son asignables masivamente
     protected $fillable = [
@@ -19,9 +19,9 @@ class Notification extends Model
     	return $this->belogsTo('App\User');
     }
     
-    public function setFileAttribute($file){
+  /*  public function setFileAttribute($file){
     	$this->attributes['file']= Carbon::now->second.$file->getClientOriginalName();
     	$name=Carbon::now->second.$file->getClientOriginalName();
     	\Storage::disk('local')->put($name, \File::get($file));
-    }
+    }*/
 }
