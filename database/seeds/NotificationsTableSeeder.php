@@ -17,6 +17,7 @@ class NotificationsTableSeeder extends Seeder
 		           DB::table('notifications')->insert([
 		           'title'=> $faker->sentence,
 		           'description'=> $faker->paragraph,
+                   'file'=>$faker->word,
 		       ]);
 		   }
 		}
