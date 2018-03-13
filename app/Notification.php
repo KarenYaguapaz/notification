@@ -19,13 +19,11 @@ class Notification extends Model
     	return $this->belogsTo('App\User');
     }
     
-<<<<<<< HEAD
-  /*  public function setFileAttribute($file){
+
+/*  public function setFileAttribute($file){
     	$this->attributes['file']= Carbon::now->second.$file->getClientOriginalName();
     	$name=Carbon::now->second.$file->getClientOriginalName();
     	\Storage::disk('local')->put($name, \File::get($file));
     }*/
-=======
 
->>>>>>> 2e8c4053ae6cb5e43951f7739ead3facc7ac721a
 }
