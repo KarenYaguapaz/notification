@@ -20,9 +20,5 @@ Route::get('/user', 'UsersController@index');
 Route::resource('page', 'PageController');
 //Route::get('/notification', 'NotificationsController@index');
 //Route::get('/notification', ['as'=>'notifications','uses'=>'NotificationsController@index']);
-<<<<<<< HEAD
-Route::post('/notification/store', ['as'=>'notifications.store','uses'=>'NotificationsController@store']);
-=======
-//Route::post('/notification/store', ['as'=>'notification.store','uses'=>'NotificationsController@store']);
+
 Route::resource('notification', 'NotificationsController');
->>>>>>> 2e8c4053ae6cb5e43951f7739ead3facc7ac721a

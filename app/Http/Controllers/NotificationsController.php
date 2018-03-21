@@ -6,6 +6,7 @@ use App\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
+
 class NotificationsController extends Controller
 {
    public function __construct()
@@ -13,8 +14,8 @@ class NotificationsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
-        return view('notification.index',['notifications'=>Notification::get()]);
+     public function index(){
+        return view('notification.index', ['notifications'=>Notification ::get()]);
     }
     public function create()
     {
@@ -26,9 +27,7 @@ class NotificationsController extends Controller
         $notification->title = $request->title;
         $notification->description = $request->description;
         $notification->file = 'archivo.png';
-
         $notification->save();
-
         return redirect()->route('notification.index');
     }
     public function show($id)
