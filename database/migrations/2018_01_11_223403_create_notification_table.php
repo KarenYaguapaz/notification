@@ -21,9 +21,7 @@ class CreateNotificationTable extends Migration
 
              $table->timestamps();
         });
-        Schema::table('notification', function ($table){
-            $table->text('file');
-        });
+
     }
 
     /**

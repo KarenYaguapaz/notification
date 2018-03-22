@@ -17,7 +17,7 @@ class PagesTableSeeder extends Seeder
             DB::table('pages')->insert([
                 'title' => $faker->sentence,
                 'description' => $faker->paragraph,
-                'image' => $faker->image('images',400,300),
+                'image' => $faker->imageUrl('640', '480'),
             ]);
         }
     }
