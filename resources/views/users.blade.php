@@ -16,11 +16,11 @@
 								<div class="form-group">
 									<input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
 								</div>
-								{{Form::submit('Enviar!')}}
 							</form>
 						</div>
-						{{Form::date('name', \Carbon\Carbon::now())}}
-
+						{{Form::label('user', 'Usuario')}} 
+						{{Form::text('usuario')}}
+						{{Form::submit('Enviar!')}}
 					</div>
 					<div class="col-md-9">  
 

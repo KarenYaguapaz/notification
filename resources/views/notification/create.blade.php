@@ -14,6 +14,7 @@
                         {!! Form::open(['route' => 'notification.store','files'=>true]) !!}
                         {{Form::text('title')}}<br>
                         {{Form::textarea('description')}}
+                        {{Form::file('file')}}
                         {{Form::submit('enviar')}}
                         {!! Form::close() !!}
                     </div>

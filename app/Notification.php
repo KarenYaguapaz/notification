@@ -20,6 +20,7 @@ class Notification extends Model
     }
     
 
+
 /*  public function setFileAttribute($file){
     	$this->attributes['file']= Carbon::now->second.$file->getClientOriginalName();
     	$name=Carbon::now->second.$file->getClientOriginalName();
